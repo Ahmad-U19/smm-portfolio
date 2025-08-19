@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitally Muse — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="./logo.png" alt="">
+    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Social, But Smarter</h1>
+    <p>I understand fully well that you need an extra pair of hands to manage other business tasks that you no longer have time to do. While you're focused on building your business, allow me to handle your business tasks that'll normally take up your time.</p>
+    <a href="#contact" class="btn">Let’s Work Together</a>
+  </header>
+
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>Hi, I'm Muneeba, a results-driven Social Media Manager and Virtual Assistant with 1.5 years of experience helping brands grow their online presence and streamline day-to-day operations. I specialize in crafting compelling content, managing social media platforms, engaging audiences, and providing efficient administrative support so you can focus on what matters most — growing your business.</p>
+    <p>I'm passionate about creating meaningful connections online and making business owners’ lives easier by being a reliable right-hand. Whether it’s boosting your social media engagement or taking over behind-the-scenes tasks, I’m here to help you thrive.</p>
+  </section>
+
+  <section id="tools" class="container">
+    <h2>Tools I Use</h2>
+    <div class="card">
+      <ul>
+        <li>Canva</li>
+        <li>CapCut</li>
+        <li>Meta Business Suite</li>
+        <li>Facebook Ads Manager</li>
+        <li>Instagram</li>
+        <li>TikTok</li>
+        <li>Buffer</li>
+        <li>Hootsuite</li>
+        <li>Google Sheets & Docs</li>
+        <li>Trello / Asana</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <div class="card">
+      <ul>
+        <li>Content Strategy</li>
+        <li>Social Media Management</li>
+        <li>Scheduling & Calendar Planning</li>
+        <li>Community Engagement</li>
+        <li>Caption Writing & Hashtags</li>
+        <li>Ad Campaign Setup</li>
+        <li>Competitor Research</li>
+        <li>Analytics & Reporting</li>
+        <li>Lead Generation</li>
+        <li>Inbox & Comment Management</li>
+        <li>Basic Design & Video Editing</li>
+        <li>Administrative Support</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="portfolio" class="container">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="card">
+        <h3>Client 1 — Local Boutique</h3>
+        <p>Developed a 30-day content strategy, produced 12 reels and 20 posts, raised average engagement rate from 2.1% to 5.4%, and grew followers by 1,200 in 6 weeks.</p>
+      </div>
+      <div class="card">
+        <h3>Client 2 — Homemade Cake Shop</h3>
+        <p>Managed social media for a homemade cake shop, creating engaging content for Facebook and Instagram, including banners, flyers, and reels that reflect the brand’s aesthetic. Conducted competitor research to stay ahead of trends, planned and scheduled posts strategically, and handled lead generation through targeted campaigns.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p style="text-align:center; margin-top:20px;">Connect with me on <a href="#">LinkedIn</a>, <a href="#">Instagram</a>, or <a href="#">Twitter</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Digitally Muse by Muneeba Saleem. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const toggle=document.getElementById('menu-toggle');
+    const links=document.getElementById('nav-links');
+    toggle.addEventListener('click',()=>links.classList.toggle('active'));
+  </script>
+</body>
+</html>
