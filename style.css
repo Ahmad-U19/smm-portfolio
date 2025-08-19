@@ -231,8 +231,24 @@ footer {
     justify-items: center;
   }
 
+  .portfolio-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers cards horizontally */
+  }
+
   .portfolio-grid .card {
-    max-width: 90%;
+    margin: 0 auto;       /* centers each card */
+    max-width: 90%;       /* prevent overflow */
+    width: 100%;
+    text-align: center;   /* centers inner content like text */
+  }
+
+  .portfolio-grid .card img {
+    max-width: 100%;      /* make sure images don’t overflow */
+    height: auto;
+    display: block;
+    margin: 0 auto;       /* centers images inside the card */
   }
 
   form {
