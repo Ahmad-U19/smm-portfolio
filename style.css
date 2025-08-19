@@ -118,6 +118,12 @@ nav .nav-links a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  justify-items: center;
+}
+
+.portfolio-grid .card {
+  max-width: 500px;
+  width: 100%;
 }
 
 /* Tools & Skills */
@@ -139,6 +145,7 @@ form {
   gap: 15px;
   max-width: 500px;
   margin: 0 auto 20px;
+  width: 100%;
 }
 
 input, textarea {
@@ -221,11 +228,16 @@ footer {
 
   .service-grid, .portfolio-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .portfolio-grid .card {
+    max-width: 90%;
   }
 
   form {
-    width: 100%;
-    padding: 0 10px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   section {
