@@ -6,11 +6,16 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;  /* ✅ enables smooth scrolling */
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #FFECB9;
   color: #581435;
   line-height: 1.6;
+  padding-top: 80px;  /* prevents content from hiding under navbar */
 }
 
 h1, h2, h3 {
@@ -38,16 +43,19 @@ section {
   text-align: center;
 }
 
-/* Nav (keep user provided styles intact) */
+/* Nav */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
   background: #FFECB9;
-  position: sticky;
+  position: fixed;   /* fixed so it always stays on top */
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;          /* ✅ prevents overlap with scrollbar */
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
 nav .logo img {
