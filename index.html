@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digitally Muse</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitally Muse</title>
+    <script src="https://kit.fontawesome.com/ac7d1ac72d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="./fav.png" />
 </head>
@@ -116,26 +118,42 @@
       </div>
     </div>
   </section>
-
-  <section id="contact" class="container">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
+  
+  <section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <form id="contact-form" class="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required />
+    <input type="email" name="user_email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
     </form>
     <p style="text-align:center; margin-top:20px;">Connect with me on <a href="#">LinkedIn</a>, <a href="https://www.instagram.com/digitallymuse">Instagram</a>, or <a href="#">Twitter</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Digitally Muse by Muneeba Saleem. All Rights Reserved.</p>
+    <p><i class="fa-brands fa-whatsapp"></i>: +92 305 468 9869<br>© 2025 Digitally Muse by Muneeba Saleem. All Rights Reserved.</p>
   </footer>
 
   <script>
     const toggle=document.getElementById('menu-toggle');
     const links=document.getElementById('nav-links');
     toggle.addEventListener('click',()=>links.classList.toggle('active'));
+  
+    (function(){
+      emailjs.init("D-z8DFrr-l-yGS2W1"); // Your Public Key
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_bb31q5t", "template_7u1evs7", this)
+        .then(function() {
+          alert("✅ Message sent successfully!");
+         document.getElementById("contact-form").reset();
+       }, function(error) {
+          alert("❌ Failed to send: " + JSON.stringify(error));
+       });
+    });
   </script>
 </body>
 </html>
